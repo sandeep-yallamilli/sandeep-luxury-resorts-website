@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="luxuryGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3B0" />
+      <stop offset="25%" stop-color="#E5C07B" />
+      <stop offset="55%" stop-color="#C5A059" />
+      <stop offset="85%" stop-color="#9C7A33" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141618" />
+      <stop offset="100%" stop-color="#08090A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Luxury Background Squircle -->
+  <rect width="100" height="100" rx="22" fill="url(#bgGrad)" />
+  <rect width="98" height="98" x="1" y="1" rx="21" stroke="url(#luxuryGold)" stroke-width="1.2" stroke-opacity="0.4" fill="none" />
+
+  <!-- Outer Diamond Cartouche -->
+  <path
+    d="M50 8 L88 46 L50 84 L12 46 Z"
+    stroke="url(#luxuryGold)"
+    stroke-width="1.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Corner Notch Accents on Diamond -->
+  <path d="M46 12 L50 8 L54 12" stroke="url(#luxuryGold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M46 80 L50 84 L54 80" stroke="url(#luxuryGold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M16 42 L12 46 L16 50" stroke="url(#luxuryGold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M84 42 L88 46 L84 50" stroke="url(#luxuryGold)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Inner Concentric Dashed Diamond -->
+  <path
+    d="M50 14 L82 46 L50 78 L18 46 Z"
+    stroke="url(#luxuryGold)"
+    stroke-width="0.8"
+    stroke-dasharray="2 2.5"
+    opacity="0.5"
+  />
+
+  <!-- Top 8-Point Celestial Star -->
+  <g transform="translate(50, 20)">
+    <path d="M0 -5.5 L1.4 -1.4 L5.5 0 L1.4 1.4 L0 5.5 L-1.4 1.4 L-5.5 0 L-1.4 -1.4 Z" fill="url(#luxuryGold)" />
+    <circle cx="0" cy="0" r="0.7" fill="#FFFFFF" />
+  </g>
+
+  <!-- East & West Micro Diamond Accents -->
+  <polygon points="23,46 24.5,44.5 26,46 24.5,47.5" fill="url(#luxuryGold)" opacity="0.8" />
+  <polygon points="77,46 75.5,44.5 74,46 75.5,47.5" fill="url(#luxuryGold)" opacity="0.8" />
+
+  <!-- Royal Serif Monogram: 'S' and 'R' Interlocked -->
+  <!-- 'S' Serif Letterform -->
+  <path
+    d="M38 34 C38 32.5 40 31 45 31 C50 31 52.5 33 52.5 36.5 C52.5 40.5 48.5 42.5 42 44.5 C35.5 46.5 31.5 49.5 31.5 54 C31.5 59.5 36 62.5 43.5 62.5 C48.5 62.5 51.5 60.5 53 58"
+    stroke="url(#luxuryGold)"
+    stroke-width="2.3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="37.5" cy="35" r="1.2" fill="url(#luxuryGold)" />
+  <circle cx="53" cy="57" r="1.2" fill="url(#luxuryGold)" />
+
+  <!-- 'R' Serif Letterform -->
+  <path d="M53 31 H60 M53 62.5 H60" stroke="url(#luxuryGold)" stroke-width="1.1" stroke-linecap="round" />
+  <path d="M56.5 31 V62.5" stroke="url(#luxuryGold)" stroke-width="2.5" stroke-linecap="round" />
+  <path
+    d="M56.5 31 H65.5 C71 31 74 34 74 38.5 C74 43 71 46 65.5 46 H56.5"
+    stroke="url(#luxuryGold)"
+    stroke-width="2.3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M63.5 46 C66.5 50 69 55.5 74.5 62.5"
+    stroke="url(#luxuryGold)"
+    stroke-width="2.5"
+    stroke-linecap="round"
+  />
+  <path d="M71.5 62.5 H76.5" stroke="url(#luxuryGold)" stroke-width="1.1" stroke-linecap="round" />
+
+  <!-- Pedestal Line & Bottom Gem -->
+  <path d="M35 70 H65" stroke="url(#luxuryGold)" stroke-width="1" stroke-linecap="round" opacity="0.65" />
+  <polygon points="50,68.5 52,70 50,71.5 48,70" fill="url(#luxuryGold)" />
+</svg>

@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+  
+  /* Shared Colors */
+  --color-navy: #0A192F;
+  --color-gold: #C5A059;
+  --color-turquoise: #14B8A6;
+  
+  /* Theme-Aware Variables */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --animate-fade-in-up: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-shimmer: shimmer 2s infinite linear;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+:root {
+  /* Ultra-Luxury Orange Cream Theme */
+  --background: #FFF5EA;
+  --foreground: #281C16;
+}
+
+.dark {
+  /* Dark Theme (Sophisticated Deep Slate) */
+  --background: #141618;
+  --foreground: #E2E8F0;
+}
+
+/* Base Editorial Styling */
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  scroll-behavior: auto;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Image Clarity & Rendering Optimizations */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+}
+
+.img-clear {
+  filter: contrast(1.05) saturate(1.05) brightness(1.02);
+  transform: translateZ(0);
+}
+
+/* Custom Editorial Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #C5A059 var(--background);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C5A059 0%, #D4AF37 100%);
+  border: 2px solid var(--background);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #E6C280 0%, #FFF099 100%);
+}
+
+/* Premium Typography Classes */
+.font-editorial {
+  font-family: var(--font-serif), serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF099 0%, #D4AF37 40%, #AA820A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-silver-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 60%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #C5A059 0%, #FFF099 25%, #D4AF37 50%, #FFF099 75%, #C5A059 100%);
+  background-size: 200% auto;
+  color: #000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-gold 4s linear infinite;
+}
+
+@keyframes shimmer-gold {
+  to { background-position: 200% center; }
+}
+
+/* Ambient Backdrop Glows */
+.ambient-glow-gold {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0) 70%);
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.ambient-glow-teal {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, rgba(20, 184, 166, 0) 70%);
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+/* Glassmorphism Styles (Theme Aware) */
+.glass-panel {
+  background: color-mix(in srgb, var(--background), transparent 20%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.glass-panel-luxury {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(2, 6, 23, 0.95) 100%);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Luxury Glow & Hover Effects */
+.gold-glow-card {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gold-glow-card:hover {
+  border-color: rgba(212, 175, 55, 0.8);
+  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.28), 0 0 24px rgba(212, 175, 55, 0.2);
+  transform: translateY(-6px);
+}
+
+.btn-luxury-gold {
+  background: linear-gradient(135deg, #F5D77F 0%, #D4AF37 50%, #B8860B 100%);
+  color: #020617;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 28px rgba(212, 175, 55, 0.35);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-luxury-gold:hover {
+  background: linear-gradient(135deg, #FFF099 0%, #F5D77F 50%, #D4AF37 100%);
+  box-shadow: 0 14px 40px rgba(212, 175, 55, 0.6), 0 0 20px rgba(255, 240, 153, 0.4);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Gold Underline Transitions */
+.luxury-link {
+  position: relative;
+}
+.luxury-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #D4AF37;
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.luxury-link:hover::after {
+  width: 100%;
+}
