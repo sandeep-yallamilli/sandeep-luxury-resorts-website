@@ -24,6 +24,10 @@ build/
 staticfiles/
 backend/staticfiles/
 
+# Firebase Cache
+.firebase/
+frontend/.firebase/
+
 # System & IDE
 .DS_Store
 Thumbs.db
