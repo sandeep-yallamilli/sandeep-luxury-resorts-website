@@ -62,7 +62,6 @@ def seed():
             "inclusions": ["All-inclusive Michelin breakfasts & dinners", "24/7 dedicated personal butler service", "Private airport pickup via luxury yacht transfer", "Complimentary 60-minute daily spa treatment"],
             "rooms": [
                 {"room_type": "Overwater Pool Villa", "price": 2900, "image": "images/maldives_villa.webp", "interior_image": "images/Maldives_interior.webp"},
-                {"room_type": "Grand Sunset Ocean Pavilion", "price": 4200, "image": "images/maldives_villa.webp", "interior_image": "images/Maldives_interior.webp"},
             ]
         },
         {
@@ -78,7 +77,6 @@ def seed():
             "inclusions": ["Daily morning temple yoga sessions", "Ayurvedic consultation with master doctor", "Complimentary airport transfers", "Traditional Balinese oil body massage"],
             "rooms": [
                 {"room_type": "Canopy Jungle Pool Villa", "price": 2400, "image": "images/Bali_Forest_villa.webp", "interior_image": "images/Bali_Forest_interior.webp"},
-                {"room_type": "Sacred River Sanctuary Suite", "price": 3500, "image": "images/Bali_Forest_villa.webp", "interior_image": "images/Bali_Forest_interior.webp"},
             ]
         },
         {
@@ -94,7 +92,6 @@ def seed():
             "inclusions": ["Daily private tea ceremonies", "Unlimited mineral spring onsen baths", "Bespoke kimono dress fitment", "Guided mountain forest walks"],
             "rooms": [
                 {"room_type": "Traditional Cypress Onsen Suite", "price": 2600, "image": "images/Kyoto_villa.webp", "interior_image": "images/Kyoto_interior.webp"},
-                {"room_type": "Imperial Garden Sanctuary", "price": 3800, "image": "images/Kyoto_villa.webp", "interior_image": "images/Kyoto_interior.webp"},
             ]
         },
         {
@@ -110,7 +107,6 @@ def seed():
             "inclusions": ["All-day ski equipment and mountain passes", "Private mountain guide tours", "Nightly wine tasting led by estate sommelier", "Heated outdoor chalet spa pool access"],
             "rooms": [
                 {"room_type": "Matterhorn View Chalet Suite", "price": 3100, "image": "images/Alps_villa.webp", "interior_image": "images/Alps_interior.webp"},
-                {"room_type": "Grand Alpine Penthouse", "price": 4900, "image": "images/Alps_villa.webp", "interior_image": "images/Alps_interior.webp"},
             ]
         },
         {
@@ -126,7 +122,6 @@ def seed():
             "inclusions": ["Volcanic wine tasting session", "Private catamaran sunset cruise", "Helicopter transfers", "Daily cliffside breakfast"],
             "rooms": [
                 {"room_type": "Caldera Infinity Plunge Pool Suite", "price": 3700, "image": "images/Santorini_villa.webp", "interior_image": "images/Santorini_interior.webp"},
-                {"room_type": "Royal Aegean Cliffside Manor", "price": 5200, "image": "images/Santorini_villa.webp", "interior_image": "images/Santorini_interior.webp"},
             ]
         },
         {
@@ -142,7 +137,6 @@ def seed():
             "inclusions": ["Private Riva boat charter", "7-course Michelin lemon garden table", "Personal sommelier service", "Positano coast tours"],
             "rooms": [
                 {"room_type": "Cliffside Lemon Grove Villa", "price": 4100, "image": "images/Amalfi_villa.webp", "interior_image": "images/Amalfi_interior.webp"},
-                {"room_type": "Positano Seafront Manor Suite", "price": 5800, "image": "images/Amalfi_villa.webp", "interior_image": "images/Amalfi_interior.webp"},
             ]
         },
         {
@@ -158,7 +152,6 @@ def seed():
             "inclusions": ["Outrigger canoe breakfast delivery", "Private lagoon shark & ray safari", "Polynesian massage", "24/7 dedicated butler"],
             "rooms": [
                 {"room_type": "Mount Otemanu Overwater Villa", "price": 4600, "image": "images/Bora_Bora_Villa.webp", "interior_image": "images/Bora_Bora_interior.webp"},
-                {"room_type": "Royal Polynesian Coral Bungalow", "price": 6200, "image": "images/Bora_Bora_Villa.webp", "interior_image": "images/Bora_Bora_interior.webp"},
             ]
         },
         {
@@ -174,7 +167,6 @@ def seed():
             "inclusions": ["Dawn hot air balloon safari", "Private 4x4 wildlife ranger tracking", "Starlit campfire banquet", "Bush dinner setup"],
             "rooms": [
                 {"room_type": "Great Migration Tented Pavilion", "price": 3300, "image": "images/Serengeti_Villa.webp", "interior_image": "images/Serengeti_interior.webp"},
-                {"room_type": "Royal Savanna Lodge", "price": 4800, "image": "images/Serengeti_Villa.webp", "interior_image": "images/Serengeti_interior.webp"},
             ]
         },
         {
@@ -190,7 +182,6 @@ def seed():
             "inclusions": ["Private beach cove dining", "Giant tortoise sanctuary tour", "Seafood chef masterclass", "Deep sea fishing"],
             "rooms": [
                 {"room_type": "Granite Cliffside Ocean Villa", "price": 4400, "image": "images/Seychelles_villa.webp", "interior_image": "images/Seychelles_interior.webp"},
-                {"room_type": "Private Cove Beach Sanctuary", "price": 6100, "image": "images/Seychelles_villa.webp", "interior_image": "images/Seychelles_interior.webp"},
             ]
         },
         {
@@ -206,7 +197,6 @@ def seed():
             "inclusions": ["Private marble hammam spa", "Atlas Mountain chopper excursion", "Moroccan culinary dining", "Spiced herbal tea ritual"],
             "rooms": [
                 {"room_type": "Royal Terracotta Palace Riad", "price": 3800, "image": "images/Marrakech_villa.webp", "interior_image": "images/Marrakech_interior.webp"},
-                {"room_type": "Atlas View Oasis Pavilion", "price": 5400, "image": "images/Marrakech_villa.webp", "interior_image": "images/Marrakech_interior.webp"},
             ]
         },
         {
@@ -222,7 +212,6 @@ def seed():
             "inclusions": ["Traditional dhow boat sunset sail", "Spice estate guided walk", "Coral reef night diving", "Private beach BBQ"],
             "rooms": [
                 {"room_type": "Sultan White Sand Beach Bungalow", "price": 3500, "image": "images/Zanzibar_Villa.webp", "interior_image": "images/Zanzibar_interior.webp"},
-                {"room_type": "Coral Ocean Reef Pavilion", "price": 4900, "image": "images/Zanzibar_Villa.webp", "interior_image": "images/Zanzibar_interior.webp"},
             ]
         },
         {
@@ -238,7 +227,6 @@ def seed():
             "inclusions": ["Master Ayurvedic Panchakarma treatment", "Lotus lake canoe yoga", "Kathakali performance", "Teak houseboat cruise"],
             "rooms": [
                 {"room_type": "Palm Backwater Wellness Villa", "price": 3200, "image": "images/Kerala_villa.webp", "interior_image": "images/Kerala_interior.webp"},
-                {"room_type": "Royal Teak Floating Houseboat Suite", "price": 4500, "image": "images/Kerala_villa.webp", "interior_image": "images/Kerala_interior.webp"},
             ]
         },
         {
@@ -254,7 +242,6 @@ def seed():
             "inclusions": ["Thermal hot spring bath access", "High altitude sherpa trek", "Starlit glass observatory viewing", "Pine cedar fireside tea"],
             "rooms": [
                 {"room_type": "Himalayan Snow Peak Chalet", "price": 3600, "image": "images/Himalayan_villa.webp", "interior_image": "images/Himalayan_interior.webp"},
-                {"room_type": "Cedar Thermal Hot Spring Sanctuary", "price": 5100, "image": "images/Himalayan_villa.webp", "interior_image": "images/Himalayan_interior.webp"},
             ]
         },
         {
@@ -270,7 +257,6 @@ def seed():
             "inclusions": ["Andaman sea longtail boat tour", "Royal Thai herbal compress spa", "Private seafood banquet", "Cliffside infinity pool access"],
             "rooms": [
                 {"room_type": "Emerald Bay Ocean Plunge Villa", "price": 3400, "image": "images/Thailand_villa.webp", "interior_image": "images/Thailand_interior.webp"},
-                {"room_type": "Royal Andaman Cliffside Sanctuary", "price": 4800, "image": "images/Thailand_villa.webp", "interior_image": "images/Thailand_interior.webp"},
             ]
         },
         {
@@ -282,11 +268,10 @@ def seed():
             "rating": 5.0,
             "priceStart": 4500,
             "region": "ocean",
-            "image": "images/fiji.webp",
+            "image": "images/Fiji_Yasawa_Villa.webp",
             "inclusions": ["Private helicopter island transfer", "24/7 Polynesian personal butler", "Overwater glass plunge pool", "Coral reef snorkeling tour"],
             "rooms": [
                 {"room_type": "Yasawa Overwater Plunge Pool Villa", "price": 4500, "image": "images/Fiji_Yasawa_Villa.webp", "interior_image": "images/Fiji_interior.webp"},
-                {"room_type": "Royal South Pacific Island Pavilion", "price": 6500, "image": "images/Fiji.webp", "interior_image": "images/Fiji_interior.webp"},
             ]
         },
         {
@@ -302,7 +287,6 @@ def seed():
             "inclusions": ["Royal Thar desert camel safari", "Starlit sitar & folk dance dinner", "Private marble courtyard pool", "Royal Ayurvedic spa"],
             "rooms": [
                 {"room_type": "Sandstone Fort Royal Suite", "price": 3500, "image": "images/Rajasthan_villa.webp", "interior_image": "images/Rajasthan_interior.webp"},
-                {"room_type": "Imperial Thar Palace Pavilion", "price": 5200, "image": "images/Rajasthan_villa.webp", "interior_image": "images/Rajasthan_interior.webp"},
             ]
         }
     ]
