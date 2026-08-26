@@ -206,7 +206,7 @@ const SIGNATURE_VILLAS: Villa[] = [
     price: 450000,
     features: ["Private overwater plunge pool", "24/7 Polynesian Butler", "Glass lagoon viewing chamber", "Helicopter pad transfer", "Private coral reef access"],
     desc: "Perched over pristine turquoise South Pacific lagoons in the Yasawa Islands of Fiji with overwater glass plunge pools and private coral reef coves.",
-    image: "/images/Fiji_Villa.webp",
+    image: "/images/Fiji_Yasawa_Villa.webp",
     Interiordesign: "/images/Fiji_interior.webp"
   }
 ];
@@ -261,7 +261,7 @@ export default function VillaExplorer({ initialResortSlug, initialVillaId }: Vil
             price: parseFloat(rm.price) || matchedSignature?.price || 350000,
             features: matchedSignature?.features || ["Private Pool / Hot Tub", "24/7 Butler Service", "Panoramic Horizon View", "Organic Spa Amenities"],
             desc: matchedSignature?.desc || `Luxury ${rm.room_type} located at ${rm.resort_name || 'our exclusive sanctuary'}. Crafted for ultimate serenity and private relaxation.`,
-            image: rm.image || matchedSignature?.image || "/images/Fiji_Villa.webp",
+            image: rm.image || matchedSignature?.image || "/images/Fiji_Yasawa_Villa.webp",
             Interiordesign: rm.interior_image || matchedSignature?.Interiordesign || "/images/Fiji_interior.webp",
           };
         });
