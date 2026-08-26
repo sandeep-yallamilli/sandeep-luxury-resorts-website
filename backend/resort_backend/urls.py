@@ -32,25 +32,41 @@ def serve_smart_image(request, path):
     if not clean_path:
         raise Http404("Image path is empty")
 
-    # Search in MEDIA_ROOT / 'images'
-    target_in_images = settings.MEDIA_ROOT / 'images' / clean_path
-    if target_in_images.exists() and target_in_images.is_file():
-        return serve(request, clean_path, document_root=settings.MEDIA_ROOT / 'images')
+    images_dir = settings.MEDIA_ROOT / 'images'
+    root_dir = settings.MEDIA_ROOT
 
-    # Search directly in MEDIA_ROOT
-    target_in_root = settings.MEDIA_ROOT / clean_path
-    if target_in_root.exists() and target_in_root.is_file():
-        return serve(request, clean_path, document_root=settings.MEDIA_ROOT)
+    # 1. Direct path check in images dir
+    if (images_dir / clean_path).exists() and (images_dir / clean_path).is_file():
+        return serve(request, clean_path, document_root=images_dir)
 
-    # Search space/underscore normalized filename
-    alt_name = clean_path.replace(' ', '_') if ' ' in clean_path else clean_path.replace('_', ' ')
-    alt_target_in_images = settings.MEDIA_ROOT / 'images' / alt_name
-    if alt_target_in_images.exists() and alt_target_in_images.is_file():
-        return serve(request, alt_name, document_root=settings.MEDIA_ROOT / 'images')
+    # 2. Direct path check in media root
+    if (root_dir / clean_path).exists() and (root_dir / clean_path).is_file():
+        return serve(request, clean_path, document_root=root_dir)
 
-    alt_target_in_root = settings.MEDIA_ROOT / alt_name
-    if alt_target_in_root.exists() and alt_target_in_root.is_file():
-        return serve(request, alt_name, document_root=settings.MEDIA_ROOT)
+    # 3. Known aliases map (e.g. Fiji_Villa -> Fiji_Yasawa_Villa)
+    clean_lower = clean_path.lower()
+    alias_map = {
+        'fiji_villa.webp': 'Fiji_Yasawa_Villa.webp',
+        'fiji_villa.png': 'Fiji_Yasawa_Villa.webp',
+        'fiji.png': 'fiji.webp',
+        'fiji.webp': 'fiji.webp',
+    }
+    if clean_lower in alias_map:
+        target_alias = alias_map[clean_lower]
+        if (images_dir / target_alias).exists() and (images_dir / target_alias).is_file():
+            return serve(request, target_alias, document_root=images_dir)
+
+    # 4. Case-insensitive & space/underscore normalized scan
+    target_clean = clean_lower.replace('_', ' ')
+    if images_dir.exists():
+        for f in images_dir.iterdir():
+            if f.is_file() and (f.name.lower() == clean_lower or f.name.lower().replace('_', ' ') == target_clean):
+                return serve(request, f.name, document_root=images_dir)
+
+    if root_dir.exists():
+        for f in root_dir.iterdir():
+            if f.is_file() and (f.name.lower() == clean_lower or f.name.lower().replace('_', ' ') == target_clean):
+                return serve(request, f.name, document_root=root_dir)
 
     raise Http404(f"Image '{path}' not found")
 

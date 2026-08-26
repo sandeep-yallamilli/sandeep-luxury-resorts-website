@@ -46,16 +46,26 @@ export function getBackendImageUrl(src: string): string {
 }
 
 /**
- * Global image error handler to hide broken/missing images when backend image is deleted or missing.
+ * Global image error handler with automatic fallback to local public asset if backend fails.
  */
 export function handleImageError(
   e: React.SyntheticEvent<HTMLImageElement, Event>
 ) {
   const target = e.currentTarget;
-  target.style.display = 'none';
-  if (target.parentElement) {
-    target.parentElement.style.display = 'none';
+  const currentSrc = target.src;
+
+  // If backend image failed, attempt fallback to local static public asset
+  if (BASE_URL && currentSrc.includes(BASE_URL) && !target.dataset.triedFallback) {
+    target.dataset.triedFallback = 'true';
+    const localPath = currentSrc.replace(BASE_URL, '');
+    if (localPath) {
+      target.src = localPath;
+      return;
+    }
   }
+
+  // Hide the img element only, never hide the parent layout
+  target.style.opacity = '0';
 }
 
 /**
