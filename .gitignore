@@ -24,9 +24,17 @@ build/
 staticfiles/
 backend/staticfiles/
 
-# Firebase Cache
+# Firebase & Vercel Caches
 .firebase/
 frontend/.firebase/
+.vercel/
+backend/.vercel/
+
+# Test Results & Artifacts
+test-results/
+frontend/test-results/
+playwright-report/
+frontend/playwright-report/
 
 # System & IDE
 .DS_Store
