@@ -76,16 +76,24 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 # CORS Configuration
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https:\/\/.*\.web\.app$",
+    r"^https:\/\/.*\.firebaseapp\.com$",
+    r"^https:\/\/.*\.vercel\.app$",
+    r"^http:\/\/localhost:\d+$",
+    r"^http:\/\/127\.0\.0\.1:\d+$",
+]
 CORS_ALLOWED_ORIGINS = [
-    origin.strip() for origin in os.getenv('CORS_ALLOWED_ORIGINS', '').split(',') if origin.strip()
-] or [
+    "https://sandeep-luxury-resorts.web.app",
+    "https://sandeep-luxury-resorts.firebaseapp.com",
+    "https://sandeep-luxury-resorts-backend.vercel.app",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]
-CORS_ALLOW_ALL_ORIGINS = os.getenv('CORS_ALLOW_ALL_ORIGINS', 'True' if DEBUG else 'False').lower() in ('true', '1', 't')
-CORS_ALLOW_CREDENTIALS = True
 
 # Django REST Framework Configuration with Security Throttling
 REST_FRAMEWORK = {

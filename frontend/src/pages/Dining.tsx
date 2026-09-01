@@ -53,11 +53,7 @@ export default function Dining() {
     setLoading(true);
     apiClient.getServices("dining")
       .then((data) => {
-        const filtered = data.filter((s) => {
-          const text = (s.name + " " + s.description).toLowerCase();
-          return DINING_KEYWORDS.some((kw) => text.includes(kw));
-        });
-        setDiningServices(filtered);
+        setDiningServices(data);
       })
       .catch((err) => {
         console.error("Failed to load dining services:", err);

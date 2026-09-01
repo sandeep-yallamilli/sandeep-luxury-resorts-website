@@ -55,11 +55,22 @@ export function handleImageError(
   const currentSrc = target.src;
 
   // If backend image failed, attempt fallback to local static public asset
-  if (BASE_URL && currentSrc.includes(BASE_URL) && !target.dataset.triedFallback) {
+  if (!target.dataset.triedFallback) {
     target.dataset.triedFallback = 'true';
-    const localPath = currentSrc.replace(BASE_URL, '');
-    if (localPath) {
+    let localPath = currentSrc;
+    if (BASE_URL && localPath.includes(BASE_URL)) {
+      localPath = localPath.replace(BASE_URL, '');
+    }
+    if (localPath.startsWith('/media/images/')) {
+      localPath = localPath.replace('/media/images/', '/images/');
+    } else if (localPath.startsWith('/media/')) {
+      localPath = localPath.replace('/media/', '/images/');
+    } else if (!localPath.startsWith('/images/') && !localPath.startsWith('http')) {
+      localPath = '/images/' + localPath.replace(/^\//, '');
+    }
+    if (localPath && localPath !== currentSrc) {
       target.src = localPath;
+      target.style.opacity = '1';
       return;
     }
   }
