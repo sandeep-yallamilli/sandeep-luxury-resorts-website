@@ -21,8 +21,6 @@ frontend/.env.local
 dist/
 frontend/dist/
 build/
-staticfiles/
-backend/staticfiles/
 
 # Firebase & Vercel Caches
 .firebase/

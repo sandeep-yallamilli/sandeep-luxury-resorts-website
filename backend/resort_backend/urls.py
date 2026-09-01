@@ -120,6 +120,7 @@ urlpatterns = [
     path('', root_home, name='root_home'),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
+    re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     re_path(r'^images/(?P<path>.*)$', serve_smart_image),
     re_path(r'^media/images/(?P<path>.*)$', serve_smart_image),
     re_path(r'^media/(?P<path>.*)$', serve_smart_image),
